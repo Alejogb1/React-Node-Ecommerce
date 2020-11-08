@@ -1,0 +1,4 @@
+IDEAS:
+Hacer en la seccion checkout dos opciones: 
+1) Comprar con tarjeta 
+2) Completar orden via Whatsapp (boton verde)
