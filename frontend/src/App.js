@@ -4,7 +4,7 @@ import './index.css';
 import {BrowserRouter, Route, Link} from "react-router-dom"
 import HomeScreen from "./screens/HomeScreen"
 import ProductScreen from "./screens/ProductScreen"
-import CartScreen from "./screens/CartScreen"
+import SigninScreen from './screens/SigninScreen';
 
 
 function App() {
@@ -22,11 +22,10 @@ function App() {
                 <button onClick={openMenu}>
                     &#9776;
                 </button>
-                <Link to="/">amazona</Link>
+                <Link to="/">Cheese Store</Link>
             </div>
             <div className="header-links">
-                <a href="signin.html">Sign In</a>
-                <a href="cart.html">Cart</a>
+                <Link to="/signin">Login</Link>
             </div>
       </header>
       <aside className="sidebar">
@@ -43,8 +42,8 @@ function App() {
       </aside>
       <main className="main">
         <div className="content">
+          <Route path="/signin" component={SigninScreen}/>
           <Route path="/product/:id" component={ProductScreen}/>
-          <Route path="/cart/:id" component={CartScreen}/>
           <Route path="/" exact={true} component={HomeScreen}/>
         </div>
       </main>
