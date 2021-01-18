@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
+import './assets/main.css';
 import './index.css';
 import {BrowserRouter, Route, Link} from "react-router-dom"
 import HomeScreen from "./screens/HomeScreen"
 import ProductScreen from "./screens/ProductScreen"
 import SigninScreen from './screens/SigninScreen';
+import HeroScreen from './screens/HeroScreen';
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
   }
   return (
     <BrowserRouter>
+    
     <div className="grid-container">
       <header className="header">
             <div className="brand">
@@ -41,10 +44,13 @@ function App() {
             </ul>
       </aside>
       <main className="main">
+        <div className="row hero-container">
+        </div>
         <div className="content">
           <Route path="/signin" component={SigninScreen}/>
           <Route path="/product/:id" component={ProductScreen}/>
           <Route path="/" exact={true} component={HomeScreen}/>
+          <Route path="/hero" exact={true} component={HeroScreen}/>
         </div>
       </main>
       <footer className="footer">
